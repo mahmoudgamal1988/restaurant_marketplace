@@ -17,7 +17,7 @@ def post_save_create_user_profile(sender, instance, created, **kwargs):
             print('User Profile is updated')
         except:
             UserProfile.objects.create(user=instance)
-            print('User Profile didn\'t exits, I have created a new one.')
+            print('User Profile didn\'t exit, I have created a new one.')
 
 # this is another way instead of using the decorator
 #post_save.connect(post_save_create_user_profile, sender=User)
